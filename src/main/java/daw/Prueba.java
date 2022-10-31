@@ -15,6 +15,12 @@ public class Prueba {
      */
     public static void main(String[] args) {
         //metodo main para probar los 4 metodos anteriores
+        
+        Utilidades.aleatorioRango(0, 0);
+        
+        Utilidades.enteroRango();
+        
+        Utilidades.leerEntero();
     }
     
 }

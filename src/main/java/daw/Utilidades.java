@@ -2,8 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
-
 package daw;
+
+import java.util.InputMismatchException;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -11,28 +14,65 @@ package daw;
  */
 public class Utilidades {
 
-    public static void main(String[] args) {
-        //metodo leer entero sin errores
-        //metodo leer entero en un rango
-        //metodo compararEnteroRango
-        //metodo generar aleatorio rango
+    //metodo leer entero sin errores
+    //metodo leer entero en un rango
+    //metodo compararEnteroRango
+    //metodo generar aleatorio rango
+    public static int leerEntero() {
+
+        int numero = 0;
+        boolean repetir = true;
         
+        do {
+            Scanner teclado = new Scanner(System.in);
+            try {
+                numero = teclado.nextInt();
+                repetir = false;
+            } catch (InputMismatchException ime) {
+                System.out.println("Has introducido un número erroneo");
+                teclado.nextLine();
+            }
+        } while (repetir);
+        return numero;
+    }
+    
+    
+    public static int enteroRango() {
+
+        int numero = 0;
+        boolean repetir = true;
         
+        do {
+            Scanner teclado = new Scanner(System.in);
+            try {
+                System.out.println("Introduce un numero del 1-10");
+                numero = teclado.nextInt();
+                if (numero >= 1 && numero <= 10) {
+                repetir = false;                    
+                }
+
+            } catch (InputMismatchException ime) {
+                System.out.println("Has introducido un número erroneo");
+                teclado.nextLine();
+            }
+        } while (repetir);
+        return numero;
+    }
+    
+    
+    public static int aleatorioRango (int min, int max) {
         
-        //cosas
+        Random aleatorio = new Random ();
         
-        //recibe tres int, el primero es el numero que quiero comprobrar
-        //el segundo es el rango minimo y el tercero el maximo
-//        private static boolean comprobarRango (int numero, int min, int max) {
-//            boolean resultado = false;
-//            
-//            if (numero>=min&&numero<=max) {
-//                resultado = true;
-//            }
-//            
-//            return resultado;
-//            
-//        }
+        int numero = aleatorio.nextInt(max - min + 1) + min;
+        
+        return numero;
+        
         
     }
+    
+    
+    
+
+   
 }
