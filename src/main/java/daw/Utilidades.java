@@ -23,16 +23,16 @@ public class Utilidades {
         
         //recibe tres int, el primero es el numero que quiero comprobrar
         //el segundo es el rango minimo y el tercero el maximo
-        private static boolean comprobarRango (int numero, int min, int max) {
-            boolean resultado = false;
-            
-            if (numero>=min&&numero<=max) {
-                resultado = true;
-            }
-            
-            return resultado;
-            
-        }
+//        private static boolean comprobarRango (int numero, int min, int max) {
+//            boolean resultado = false;
+//            
+//            if (numero>=min&&numero<=max) {
+//                resultado = true;
+//            }
+//            
+//            return resultado;
+//            
+//        }
         
     }
 }
