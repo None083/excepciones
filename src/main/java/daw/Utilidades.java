@@ -60,11 +60,20 @@ public class Utilidades {
     }
     
     
+    public static boolean compararEnteroRango (int min, int max) {
+        boolean comprobar = true;
+        int numero = leerEntero
+    }
+    
+    
+    
+    
     public static int aleatorioRango (int min, int max) {
         
         Random aleatorio = new Random ();
         
         int numero = aleatorio.nextInt(max - min + 1) + min;
+        //mirar next int con dos parametros
         
         return numero;
         
