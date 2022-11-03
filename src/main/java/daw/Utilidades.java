@@ -62,7 +62,8 @@ public class Utilidades {
     
     public static boolean compararEnteroRango (int min, int max) {
         boolean comprobar = true;
-        int numero = leerEntero
+        int numero = leerEntero ();
+        return 
     }
     
     
